@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login — Orgiin</title>
+<meta name="description" content="Orgiin natural dyes">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+ <a href="index.html" class="brand"><img src="images/logo.svg" alt="">Orgiin</a>
+ <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+ <nav class="nav" id="nav">
+  <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#products">Products</a><a href="shop.html">Shop</a>
+  <a href="index.html#team">Team</a><a href="careers.html">Careers</a><a href="index.html#faq">FAQ</a>
+  <a href="cart.html" class="cartlink" aria-label="Cart">🛒 <span id="cartCount">0</span></a><a href="login.html" id="authLink">Login</a><a href="shop.html" class="btn btn-primary">Order Now</a>
+ </nav></div></header>
+
+<main><section class="page-hero"><div class="wrap"><h1>Welcome to Orgiin</h1><p>Log in or create an account to order and track your dyes.</p></div></section>
+<section><div class="wrap" style="max-width:520px">
+ <div class="tabs"><button class="tab active" data-t="login">Log in</button><button class="tab" data-t="register">Create account</button></div>
+ <form class="f" id="loginForm">
+  <div><label for="le">Email</label><input id="le" name="email" type="email" required autocomplete="email"></div>
+  <div><label for="lp">Password</label><input id="lp" name="password" type="password" required autocomplete="current-password"></div>
+  <button class="btn btn-primary" type="submit">Log in</button><p class="note err" id="lmsg"></p>
+ </form>
+ <form class="f" id="regForm" hidden>
+  <div><label for="rn">Full name</label><input id="rn" name="name" required maxlength="80" autocomplete="name"></div>
+  <div class="two"><div><label for="re">Email</label><input id="re" name="email" type="email" required autocomplete="email"></div><div><label for="rph">Phone</label><input id="rph" name="phone" type="tel" maxlength="20" autocomplete="tel"></div></div>
+  <div><label for="rp">Password (8+ characters)</label><input id="rp" name="password" type="password" required minlength="8" maxlength="72" autocomplete="new-password"></div>
+  <button class="btn btn-primary" type="submit">Create account</button><p class="note err" id="rmsg"></p>
+ </form>
+</div></section></main>
+<footer><div class="wrap">
+ <div class="foot">
+  <div><a href="index.html" class="brand"><img src="images/logo.svg" alt="">Orgiin</a>
+   <p style="font-size:.93rem">Natural, low-cost dyes made with Bangladeshi artisans — colour that is kind to people and the planet.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="index.html#about">About us</a></li><li><a href="index.html#products">Products</a><a href="shop.html">Shop</a></li><li><a href="shop.html">Shop</a></li><li><a href="index.html#process">How it works</a></li><li><a href="index.html#team">Our team</a></li></ul></div>
+  <div><h4>Company</h4><ul><li><a href="careers.html">Careers</a></li><li><a href="login.html">My account</a></li><li><a href="index.html#partners">Partners</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>
+  <div><h4>Reach us</h4><ul><li>Khulna University<br>Khulna, Bangladesh</li><li><a href="tel:+8801917195518">+880 1917 195518</a></li></ul></div>
+ </div>
+ <div class="copy">&copy; <span id="yr">2026</span> Orgiin. All rights reserved.</div>
+</div></footer>
+<a href="#" class="totop" aria-label="Back to top">↑</a>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script></body></html>

@@ -1,0 +1,11 @@
+services:
+  orgiin:
+    build: .
+    restart: unless-stopped
+    ports: ["${PORT:-3000}:3000"]
+    environment:
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@orgiin.local}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+    volumes: ["orgiin-data:/data"]
+volumes:
+  orgiin-data:

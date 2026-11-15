@@ -1,0 +1,22 @@
+# Render.com Blueprint — a persistent disk requires a paid instance type.
+services:
+  - type: web
+    name: orgiin
+    runtime: node
+    plan: starter
+    buildCommand: npm ci --omit=dev
+    startCommand: node --disable-warning=ExperimentalWarning server.js
+    healthCheckPath: /api/auth/me
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: orgiin-data
+      mountPath: /var/data
+      sizeGB: 1
